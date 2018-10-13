@@ -12,6 +12,12 @@ h1,h2,h3,h4,h5,h6{
     color: #39896A;
 }
 
+.border-hijau {
+    border: 1px solid #39896a;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
 .collapse.navbar-collapse ul li a {
     color: #39896A !important;
 }
