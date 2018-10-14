@@ -1,7 +1,8 @@
 .burger {
     width: 50px;
-    height: 50px;
+    height: 40px;
     margin: 0;
+    background: #000;
 }
 
 .burger1 span, .burger2 span, .burger3 span, .burger4 span,
@@ -9,11 +10,10 @@
     cursor: pointer;
     display: block;
     position: absolute;
-    width: 10px;              /*Bars width*/
+    width: 30px;              /*Bars width*/
     height: 4px;              /*Bars height*/
-    background: green;       /*Bars Color*/
+    background: #39896A;       /*Bars Color*/
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     transition: .5s;
     box-shadow: 0 2px 3px rgba(0,0,0,.2);       /*Bars Shadow*/
@@ -21,72 +21,84 @@
 
 .burger1 span:nth-child(1), .burger2 span:nth-child(1), .burger3 span:nth-child(1),
 .burger4 span:nth-child(1), .burger5 span:nth-child(1){
-    transform: translate(-50%, -50%) translateY(-7px);
+    transform: translate(-50%, -50%) translateY(-12px);
 }
 
 .burger1 span:nth-child(4), .burger2 span:nth-child(4), .burger3 span:nth-child(4),
 .burger4 span:nth-child(4), .burger5 span:nth-child(4){
-    transform: translate(-50%, -50%) translateY(7px);
+    transform: translate(-50%, -50%) translateY(12px);
 }
 
 /*Animation burger 1*/
 
 .burger1.active span:nth-child(1){
-    transform: translate(-50%, -50%) translateX(-40px);
+    top: 28px;
+    transform: translate(-50%, -50%) translateX(-30px);
     opacity: 0;
 }
 
 .burger1.active span:nth-child(4){
-    transform: translate(-50%, -50%) translateX(40px);
+    top: 28px;
+    transform: translate(-50%, -50%) translateX(30px);
     opacity: 0;
 }
 
 .burger1.active span:nth-child(2){
     transform: translate(-50%, -50%) rotate(45deg);
+    top: 28px;
 }
 
 .burger1.active span:nth-child(3){
     transform: translate(-50%, -50%) rotate(-45deg);
+    top: 28px;
 }
 
 /*Animation burger 2*/
 
 .burger2.active span:nth-child(1){
+    top: 28px;
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .burger2.active span:nth-child(2){
+    top: 28px;
     transform: translate(-50%, -50%) translateX(-20px);
     opacity: 0;
 }
 
 .burger2.active span:nth-child(3){
+    top: 28px;
     transform: translate(-50%, -50%) translateX(20px);
     opacity: 0;
 }
 
 .burger2.active span:nth-child(4){
+    top: 28px;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /*Animation burger 3*/
 
 .burger3.active span:nth-child(1){
+    top: 28px;
     transform: translate(-50%, -50%);
     transition-delay: .2s;
 }
 
 .burger3.active span:nth-child(2){
+    top: 28px;
     transform: translate(-50%, -50%) translateX(-20px);
     opacity: 0;
 }
 
 .burger3.active span:nth-child(3){
+    top: 28px;
     transform: translate(-50%, -50%) translateX(20px);
     opacity: 0;
 }
 
 .burger3.active span:nth-child(4){
+    top: 28px;
     transform: translate(-50%, -50%);
     transition-delay:.2s;
 }
@@ -94,37 +106,45 @@
 /*Animation burger 4*/
 
 .burger4.active span:nth-child(1){
+    top: 28px;
     transform: translate(-50%, -50%) translateY(19px) rotate(45deg);
 }
 
 .burger4.active span:nth-child(2){
+    top: 28px;
     opacity: 0;
 }
 
 .burger4.active span:nth-child(3){
+    top: 28px;
     opacity: 0;
 }
 
 .burger4.active span:nth-child(4){
+    top: 28px;
     transform: translate(-50%, -50%) translateY(-19px) rotate(-45deg);
 }
 
-/*Animation burger 4*/
+/*Animation burger 5*/
 
 .burger5.active span:nth-child(1){
+    top: 28px;
     transform: translate(-50%, -50%) translateY(-40px);
     opacity: 0;
 }
 
 .burger5.active span:nth-child(2){
+    top: 28px;
     transform: translate(-50%, -50%) translateX(19px) rotate(45deg);
     
 }
 
 .burger5.active span:nth-child(3){
+    top: 28px;
     transform: translate(-50%, -50%) translateX(-19px) rotate(-45deg);
 }
 
 .burger5.active span:nth-child(4){
+    top: 28px;
     opacity: 0;
 }
