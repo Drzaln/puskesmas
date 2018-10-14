@@ -1,17 +1,14 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: rgb(115, 101, 152);
-}
-
 .burger1 span, .burger2 span, .burger3 span, .burger4 span,
 .burger5 span {
     cursor: pointer;
     display: block;
     position: absolute;
-    width: 6px;              /*Bars width*/
+    width: 3px;              /*Bars width*/
     height: 3px;              /*Bars height*/
     background: green;       /*Bars Color*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     transition: .5s;
     box-shadow: 0 2px 3px rgba(0,0,0,.2);       /*Bars Shadow*/
 }
