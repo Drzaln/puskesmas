@@ -1,3 +1,9 @@
+.burger {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+
 .burger1 span, .burger2 span, .burger3 span, .burger4 span,
 .burger5 span {
     cursor: pointer;
