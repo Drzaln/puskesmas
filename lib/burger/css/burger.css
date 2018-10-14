@@ -12,9 +12,6 @@ body {
     width: 60px;              /*Bars width*/
     height: 6px;              /*Bars height*/
     background: #fff;       /*Bars Color*/
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     transition: .5s;
     box-shadow: 0 2px 3px rgba(0,0,0,.2);       /*Bars Shadow*/
 }
