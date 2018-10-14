@@ -14,12 +14,12 @@
 
 .burger1 span:nth-child(1), .burger2 span:nth-child(1), .burger3 span:nth-child(1),
 .burger4 span:nth-child(1), .burger5 span:nth-child(1){
-    transform: translate(-50%, -50%) translateY(-20px);
+    transform: translate(-50%, -50%) translateY(-7px);
 }
 
 .burger1 span:nth-child(4), .burger2 span:nth-child(4), .burger3 span:nth-child(4),
 .burger4 span:nth-child(4), .burger5 span:nth-child(4){
-    transform: translate(-50%, -50%) translateY(20px);
+    transform: translate(-50%, -50%) translateY(7px);
 }
 
 /*Animation burger 1*/
