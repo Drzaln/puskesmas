@@ -1,150 +1,242 @@
-.burger {
-    width: 50px;
-    height: 40px;
-    margin: 0;
-    background: #000;
+/* btn */
+.menu {
+	position: relative;
+	display:  inline-block;
+	width: 30px;
+	height: 27px;
+	margin: 0px;
+}
+.menu span {
+	margin: 0 auto;
+	position: relative;
+	top: 12px;
+}
+.menu span:before, .menu span:after {
+	position: absolute;
+	content: '';
+}
+.menu span, .menu span:before, .menu span:after {
+	width: 30px;
+	height: 4px;
+	background-color: #39896A;
+	display: block;
+}
+.menu span:before {
+	margin-top: -11px;
+}
+.menu span:after {
+	margin-top: 11px;
+}
+/* --- btn --- */
+
+/* examples */
+
+/* example 1 */
+.example1 {
+  -webkit-transform: rotate(0deg); transform: rotate(0deg);
+	-webkit-transition: 0.2s ease; transition: 0.2s ease;
+}
+.example1.active {
+	-webkit-transform: rotate(90deg); transform: rotate(90deg);
 }
 
-.burger1 span, .burger2 span, .burger3 span, .burger4 span,
-.burger5 span {
-    cursor: pointer;
-    display: block;
-    position: absolute;
-    width: 30px;              /*Bars width*/
-    height: 4px;              /*Bars height*/
-    background: #39896A;       /*Bars Color*/
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: .5s;
-    box-shadow: 0 2px 3px rgba(0,0,0,.2);       /*Bars Shadow*/
+/* example 2 */
+.example2 span:before, .example2 span:after {
+	-webkit-transition: 0.2s ease; transition: 0.2s ease;
+}
+.example2.active span:before, .example2.active span:after {
+	margin-top: 0px;
 }
 
-.burger1 span:nth-child(1), .burger2 span:nth-child(1), .burger3 span:nth-child(1),
-.burger4 span:nth-child(1), .burger5 span:nth-child(1){
-    transform: translate(-50%, -50%) translateY(-12px);
+/* example 3 */
+.example3 span {
+	-webkit-transition: 0.2s ease 0s; transition: 0.2s ease 0s;
+}
+.example3 span:before, .example3 span:after {
+	-webkit-transition-property: margin, opacity; transition-property: margin, opacity;
+	-webkit-transition-duration: 0.2s, 0s; transition-duration: 0.2s, 0s;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example3.active span {
+	width: 6px;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example3.active span:before, .example3.active span:after {
+	margin-top: 0px;
+	opacity: 0;
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
 }
 
-.burger1 span:nth-child(4), .burger2 span:nth-child(4), .burger3 span:nth-child(4),
-.burger4 span:nth-child(4), .burger5 span:nth-child(4){
-    transform: translate(-50%, -50%) translateY(12px);
+/* example 4 */
+.example4 span {
+	-webkit-transition: 0.2s ease 0s; transition: 0.2s ease 0s;
+}
+.example4 span:before, .example4 span:after {
+  -webkit-transition-property: margin, opacity; transition-property: margin, opacity;
+	-webkit-transition-duration: 0.2s, 0s; transition-duration: 0.2s, 0s;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example4.active span {
+	-webkit-transform: rotate(90deg); transform: rotate(90deg);
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example4.active span:before, .example4.active span:after {
+	margin-top: 0px;
+	opacity: 0;
+	-webkit-transition-delay: 0s, .2s; transition-delay: 0s, .2s;
 }
 
-/*Animation burger 1*/
-
-.burger1.active span:nth-child(1){
-    top: 28px;
-    transform: translate(-50%, -50%) translateX(-30px);
-    opacity: 0;
+/* example 5 */
+.example5 span {
+	-webkit-transition-duration: 0s; transition-duration: 0s;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example5.active span {
+	background-color: rgba(0,0,0,0.0);
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example5 span:before {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+}
+.example5.active span:before {
+	margin-top: 0;
+	-webkit-transform: rotate(45deg); transform: rotate(45deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+.example5 span:after {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+}
+.example5.active span:after {
+	margin-top: 0;
+	-webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
 }
 
-.burger1.active span:nth-child(4){
-    top: 28px;
-    transform: translate(-50%, -50%) translateX(30px);
-    opacity: 0;
+/* example 6 */
+.example6 span {
+	-webkit-transition-duration: 0s; transition-duration: 0s;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example6:hover span {
+	background-color: rgba(0,0,0,0.0);
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example6 span:before {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+	-webkit-transform-origin: 100% 100%; transform-origin: 100% 100%;
+}
+.example6:hover span:before {
+	margin-top: 0;
+	-webkit-transform: rotate(22.5deg) skewX(22.5deg); transform: rotate(22.5deg) skewX(22.5deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+.example6 span:after {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+	-webkit-transform-origin: 100% 0%; transform-origin: 100% 0%;
+}
+.example6:hover span:after {
+	margin-top: 0;
+	-webkit-transform: rotate(-22.5deg) skewX(-22.5deg); transform: rotate(-22.5deg) skewX(-22.5deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
 }
 
-.burger1.active span:nth-child(2){
-    transform: translate(-50%, -50%) rotate(45deg);
-    top: 28px;
+/* example 7 */
+.example7 span {
+	-webkit-transition-duration: 0s; transition-duration: 0s;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example7:hover span {
+	background-color: rgba(0,0,0,0.0);
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example7 span:before {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+	-webkit-transform-origin: 0% 100%; transform-origin: 0% 100%;
+}
+.example7:hover span:before {
+	margin-top: 0;
+	-webkit-transform: rotate(22.5deg) skewX(22.5deg); transform: rotate(22.5deg) skewX(22.5deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+.example7 span:after {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+	-webkit-transform-origin: 0% 0%; transform-origin: 0% 0%;
+}
+.example7:hover span:after {
+	margin-top: 0;
+	-webkit-transform: rotate(-22.5deg) skewX(-22.5deg); transform: rotate(-22.5deg) skewX(-22.5deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
 }
 
-.burger1.active span:nth-child(3){
-    transform: translate(-50%, -50%) rotate(-45deg);
-    top: 28px;
+/* example 8 */
+.example8 span {
+	-webkit-transition: 0.2s ease 0s; transition: 0.2s ease 0s;
+}
+.example8 span:before, .example8 span:after {
+	-webkit-transition-property: margin, opacity; transition-property: margin, opacity;
+	-webkit-transition-duration: 0.2s, 0s; transition-duration: 0.2s, 0s;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example8:hover span {
+	width: 16px;
+	height: 16px;
+	margin-top: -5px;
+	-webkit-border-radius: 50%; border-radius: 50%;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.example8:hover span:before, .example8:hover span:after {
+	margin-top: 0px;
+	opacity: 0;
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
 }
 
-/*Animation burger 2*/
-
-.burger2.active span:nth-child(1){
-    top: 28px;
-    transform: translate(-50%, -50%) rotate(45deg);
+/* example 9 */
+.example9 span {
+	-webkit-transition-property: margin, width; transition-property: margin, width;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+}
+.example9:hover span {
+	margin-top: 6px;
+	width: 20px;
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+.example9 span:after {
+  left: 0;
+	-webkit-transition-property: margin, left; transition-property: margin, left;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+}
+.example9:hover span:after {
+	margin-top: 6px;
+	left: -5px;
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+.example9 span:before {
+  left: 0;
+	-webkit-transition-property: margin, width, left; transition-property: margin, width, left;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s, 0s; transition-delay: 0.2s, 0s, 0s;
+}
+.example9:hover span:before {
+	margin-top: -6px;
+	width: 10px;
+	left: 5px;
+	-webkit-transition-delay: 0s, 0.2s, 0.2s; transition-delay: 0s, 0.2s, 0.2s;
 }
 
-.burger2.active span:nth-child(2){
-    top: 28px;
-    transform: translate(-50%, -50%) translateX(-20px);
-    opacity: 0;
-}
-
-.burger2.active span:nth-child(3){
-    top: 28px;
-    transform: translate(-50%, -50%) translateX(20px);
-    opacity: 0;
-}
-
-.burger2.active span:nth-child(4){
-    top: 28px;
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-/*Animation burger 3*/
-
-.burger3.active span:nth-child(1){
-    top: 28px;
-    transform: translate(-50%, -50%);
-    transition-delay: .2s;
-}
-
-.burger3.active span:nth-child(2){
-    top: 28px;
-    transform: translate(-50%, -50%) translateX(-20px);
-    opacity: 0;
-}
-
-.burger3.active span:nth-child(3){
-    top: 28px;
-    transform: translate(-50%, -50%) translateX(20px);
-    opacity: 0;
-}
-
-.burger3.active span:nth-child(4){
-    top: 28px;
-    transform: translate(-50%, -50%);
-    transition-delay:.2s;
-}
-
-/*Animation burger 4*/
-
-.burger4.active span:nth-child(1){
-    top: 28px;
-    transform: translate(-50%, -50%) translateY(19px) rotate(45deg);
-}
-
-.burger4.active span:nth-child(2){
-    top: 28px;
-    opacity: 0;
-}
-
-.burger4.active span:nth-child(3){
-    top: 28px;
-    opacity: 0;
-}
-
-.burger4.active span:nth-child(4){
-    top: 28px;
-    transform: translate(-50%, -50%) translateY(-19px) rotate(-45deg);
-}
-
-/*Animation burger 5*/
-
-.burger5.active span:nth-child(1){
-    top: 28px;
-    transform: translate(-50%, -50%) translateY(-40px);
-    opacity: 0;
-}
-
-.burger5.active span:nth-child(2){
-    top: 28px;
-    transform: translate(-50%, -50%) translateX(19px) rotate(45deg);
+.example10 {
     
-}
-
-.burger5.active span:nth-child(3){
-    top: 28px;
-    transform: translate(-50%, -50%) translateX(-19px) rotate(-45deg);
-}
-
-.burger5.active span:nth-child(4){
-    top: 28px;
-    opacity: 0;
 }
