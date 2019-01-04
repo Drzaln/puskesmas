@@ -1,0 +1,84 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden !important; 
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Roboto Slab', serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Patua One', cursive;
+    color: #39896A;
+}
+
+.border-hijau {
+    border: 1px solid #39896a;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.collapse.navbar-collapse ul li a {
+    color: #39896A !important;
+}
+
+.collapse.navbar-collapse ul li a:hover {
+    color: rgb(124, 190, 165) !important;
+}
+
+.navbar>.container a {
+    font-family: 'Patua One', cursive;
+    color: #39896A !important;
+}
+
+.bt-merah {
+    background: #d52828;
+}
+
+.round {
+    border-radius: 27px;
+}
+.bg-putih {
+    background: #fff;
+}
+
+.bg-kopi {
+    background: #F6F1ED;
+}
+
+.btn-hijau {
+    background: #62A658 !important;
+    color: #fff !important;
+}
+
+.btn-outline-hijau {
+    background: none;
+    border: 2px solid #62A658 !important;
+    color: #62A658 !important;
+}
+
+.text-hijau {
+    color: #39896A;
+}
+
+.full {
+    height: 100vh;
+}
+
+.atas {
+    position: relative;
+    top: 0%;
+    transform: translateY(0%); 
+}
+
+.tengah{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.bawah{
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%); 
+}
